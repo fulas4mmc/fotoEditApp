@@ -29,64 +29,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.189"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:srcCompat="@tools:sample/avatars[0]" />
 
-    <SeekBar
-        android:id="@+id/obrotY"
-        android:layout_width="244dp"
-        android:layout_height="27dp"
+    <EditText
+        android:id="@+id/edit_text_1"
+        android:layout_width="50sp"
+        android:layout_height="60sp"
+        android:layout_below="@id/obrazek"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintHorizontal_bias="0.329"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintTop_toBottomOf="@+id/obrazek"
+        app:layout_constraintVertical_bias="0.293" />
 
-    <SeekBar
-        android:id="@+id/obrotX"
-        android:layout_width="239dp"
-        android:layout_height="34dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
 
     <SeekBar
         android:id="@+id/przezroczystosc"
-        android:layout_width="243dp"
-        android:layout_height="32dp"
+        android:layout_width="230dp"
+        android:layout_height="29dp"
+        android:max="255"
+        android:progress="255"
+        android:progressTint="@color/purple_500"
+        android:thumbTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.668"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.659" />
+        app:layout_constraintTop_toBottomOf="@+id/obrazek"
+        app:layout_constraintVertical_bias="0.504" />
 
     <TextView
         android:id="@+id/textViewObrotX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="obrot w osi x"
+        android:text="obracanie"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505" />
-
-    <TextView
-        android:id="@+id/textViewObrotY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="obrotw osi y"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587" />
+        app:layout_constraintVertical_bias="0.551" />
 
     <TextView
         android:id="@+id/textViewPrzezroczystosc"
@@ -98,7 +84,7 @@
         app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.665" />
+        app:layout_constraintVertical_bias="0.679" />
 
     <SeekBar
         android:id="@+id/czerwonyFiltr"
@@ -140,7 +126,7 @@
         android:text="CZERWONY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.751" />
@@ -169,5 +155,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.886" />
 
-    §
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_text_1"
+        android:layout_centerHorizontal="true"
+        android:text="rotate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintStart_toEndOf="@+id/edit_text_1"
+        app:layout_constraintTop_toBottomOf="@+id/obrazek"
+        app:layout_constraintVertical_bias="0.312" />
+    />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
